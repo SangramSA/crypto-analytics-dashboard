@@ -1,0 +1,16 @@
+# AWS SDK
+boto3>=1.26.0
+botocore>=1.29.0
+
+# Data Processing
+pandas>=2.0.0
+numpy>=1.24.0
+
+# Logging
+structlog>=23.0.0
+
+# JSON Processing
+orjson>=3.8.0
+
+# Utilities
+python-dateutil>=2.8.0 
