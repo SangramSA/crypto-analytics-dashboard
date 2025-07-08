@@ -1,0 +1,139 @@
+# Exchange Configuration for Crypto Analytics Dashboard
+# This file contains settings for different cryptocurrency exchanges
+
+exchanges:
+  binance:
+    name: "Binance"
+    websocket_url: "wss://stream.binance.com:9443/ws/"
+    rest_api_url: "https://api.binance.com/api/v3"
+    symbols:
+      - "btcusdt"
+      - "ethusdt"
+      - "bnbusdt"
+      - "adausdt"
+      - "solusdt"
+      - "dotusdt"
+    channels:
+      - "trade"
+      - "kline_1m"
+      - "kline_5m"
+    rate_limit:
+      requests_per_second: 10
+      requests_per_minute: 1200
+    retry_config:
+      max_retries: 5
+      base_delay: 1
+      max_delay: 60
+    data_quality:
+      min_price: 0.01
+      max_price: 1000000.0
+      min_volume: 0.0
+      required_fields:
+        - "s"  # symbol
+        - "p"  # price
+        - "q"  # quantity
+        - "T"  # timestamp
+
+  coinbase:
+    name: "Coinbase Pro"
+    websocket_url: "wss://ws-feed.pro.coinbase.com"
+    rest_api_url: "https://api.pro.coinbase.com"
+    symbols:
+      - "BTC-USD"
+      - "ETH-USD"
+      - "LTC-USD"
+      - "BCH-USD"
+      - "SOL-USD"
+      - "DOT-USD"
+    channels:
+      - "matches"
+      - "level2"
+      - "ticker"
+    rate_limit:
+      requests_per_second: 3
+      requests_per_minute: 100
+    retry_config:
+      max_retries: 3
+      base_delay: 1
+      max_delay: 30
+    data_quality:
+      min_price: 0.01
+      max_price: 1000000.0
+      min_volume: 0.0
+      required_fields:
+        - "product_id"
+        - "price"
+        - "size"
+        - "time"
+
+  kraken:
+    name: "Kraken"
+    websocket_url: "wss://ws.kraken.com"
+    rest_api_url: "https://api.kraken.com/0"
+    symbols:
+      - "XBT/USD"
+      - "ETH/USD"
+      - "LTC/USD"
+      - "ADA/USD"
+    channels:
+      - "trade"
+      - "ticker"
+      - "ohlc-1"
+    rate_limit:
+      requests_per_second: 1
+      requests_per_minute: 15
+    retry_config:
+      max_retries: 3
+      base_delay: 2
+      max_delay: 30
+    data_quality:
+      min_price: 0.01
+      max_price: 1000000.0
+      min_volume: 0.0
+      required_fields:
+        - "pair"
+        - "price"
+        - "volume"
+        - "time"
+
+# Global settings
+global:
+  batch_size: 500
+  max_concurrent_connections: 10
+  connection_timeout: 30
+  read_timeout: 60
+  data_quality_threshold: 0.8
+  timestamp_tolerance_seconds: 300
+  
+  # Monitoring settings
+  health_check_interval: 300
+  metrics_interval: 60
+  
+  # Error handling
+  max_failed_records: 1000
+  dlq_enabled: true
+  dlq_stream_name: "crypto-market-data-dlq"
+  
+  # Performance optimization
+  compression_enabled: true
+  compression_algorithm: "gzip"
+  cache_enabled: true
+  cache_ttl: 300
+
+# Environment-specific settings
+environments:
+  development:
+    log_level: "DEBUG"
+    debug_mode: true
+    localstack_endpoint: "http://localhost:4566"
+    
+  staging:
+    log_level: "INFO"
+    debug_mode: false
+    batch_size: 1000
+    
+  production:
+    log_level: "WARNING"
+    debug_mode: false
+    batch_size: 2000
+    max_concurrent_connections: 20 
