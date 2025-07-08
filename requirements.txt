@@ -1,0 +1,71 @@
+# AWS SDK
+boto3>=1.26.0
+botocore>=1.29.0
+
+# Data Processing
+pandas>=2.0.0
+numpy>=1.24.0
+pyarrow>=12.0.0
+pyspark>=3.4.0
+
+# WebSocket and HTTP
+websockets>=11.0.0
+aiohttp>=3.8.0
+requests>=2.31.0
+
+# Database
+psycopg2-binary>=2.9.0
+sqlalchemy>=2.0.0
+
+# Configuration and Environment
+python-dotenv>=1.0.0
+pyyaml>=6.0.0
+pydantic>=2.0.0
+
+# Logging and Monitoring
+structlog>=23.0.0
+cloudwatch-logs>=1.0.0
+
+# Data Quality and Validation
+great-expectations>=0.17.0
+jsonschema>=4.17.0
+
+# Technical Analysis
+ta>=0.10.0
+pandas-ta>=0.3.0
+
+# Async Support
+asyncio-mqtt>=0.11.0
+aiofiles>=23.0.0
+
+# Serialization
+msgpack>=1.0.0
+orjson>=3.8.0
+
+# Utilities
+click>=8.1.0
+rich>=13.0.0
+tqdm>=4.65.0
+
+# Development and Testing
+pytest>=7.0.0
+pytest-asyncio>=0.21.0
+pytest-cov>=4.0.0
+pytest-mock>=3.10.0
+moto>=4.2.0
+responses>=0.23.0
+
+# Code Quality
+black>=23.0.0
+flake8>=6.0.0
+mypy>=1.0.0
+bandit>=1.7.0
+isort>=5.12.0
+
+# Documentation
+sphinx>=7.0.0
+sphinx-rtd-theme>=1.2.0
+
+# Local Development
+localstack>=2.0.0
+docker-compose>=1.29.0 
