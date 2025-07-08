@@ -1,0 +1,16 @@
+FROM public.ecr.aws/lambda/python:3.9
+
+# Set working directory
+WORKDIR ${LAMBDA_TASK_ROOT}
+
+# Copy requirements
+COPY src/lambda/stream_processor/requirements.txt .
+
+# Install dependencies
+RUN pip install --no-cache-dir -r requirements.txt
+
+# Copy Lambda function code
+COPY src/lambda/stream_processor/ .
+
+# Set the CMD to your handler
+CMD ["handler.lambda_handler"] 
