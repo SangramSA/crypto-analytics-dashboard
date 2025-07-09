@@ -4,14 +4,6 @@ A high-performance, open-source platform for real-time cryptocurrency analytics.
 
 Whether you're a developer, data analyst, or crypto enthusiast, this platform provides the tools to uncover market insights with **sub-second latency**.
 
-<p align="center">
-  <a href="LICENSE"><img src="https://img.shields.io/badge/License-MIT-green.svg" alt="License"></a>
-  <a href="#"><img src="https://img.shields.io/badge/build-passing-brightgreen" alt="Build Status"></a>
-  <a href="https://github.com/your-username/your-repo"><img src="https://img.shields.io/github/stars/your-username/your-repo?style=social" alt="GitHub Stars"></a>
-  <a href="https://github.com/your-username/your-repo"><img src="https://img.shields.io/github/forks/your-username/your-repo?style=social" alt="GitHub Forks"></a>
-</p>
-
----
 
 ## 🏗️ Architecture
 
@@ -91,7 +83,7 @@ Set up and run the environment locally for testing and development.
 
 ```bash
 # Clone the repository
-git clone [https://github.com/your-username/crypto-analytics-dashboard.git](https://github.com/your-username/crypto-analytics-dashboard.git)
+git clone [https://github.com/SangramSA/crypto-analytics-dashboard.git](https://github.com/SangramSA/crypto-analytics-dashboard.git)
 cd crypto-analytics-dashboard
 
 # Set up environment variables
@@ -157,7 +149,7 @@ Please follow these steps:
 4.  Push to the Branch (`git push origin feature/AmazingFeature`)
 5.  Open a Pull Request
 
-Please read `CONTRIBUTING.md` for the full guide on our development process and standards.
+Please read [CONTRIBUTING.md](CONTRIBUTING.md) for the full guide on our development process and standards.
 
 ---
 

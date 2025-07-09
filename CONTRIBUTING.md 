@@ -1,0 +1,80 @@
+# Contributing to the Real-Time Crypto Analytics Platform
+
+We are thrilled that you are interested in contributing to this project! Your contributions are what make the open-source community such a fantastic place to learn, inspire, and create. Any contributions you make are **greatly appreciated**.
+
+This document provides a set of guidelines for contributing to the platform. Following these guidelines helps to ensure a smooth and effective development process for everyone involved.
+
+## 🚀 How to Contribute
+
+We welcome contributions in various forms, including but not limited to:
+
+* **Bug Reports**: If you find a bug, please create an issue in our [GitHub Issues](https://github.com/SangramSA/crypto-analytics-dashboard/issues) page.
+* **Feature Requests**: We are open to new ideas. Feel free to suggest new features and enhancements.
+* **Code Contributions**: If you want to contribute code, please follow the steps outlined below.
+* **Documentation**: Improving documentation is just as important as improving the code. If you find any part of our documentation that can be improved, please feel free to submit a pull request.
+
+## 💻 Development Setup
+
+To get started with development, you'll need to set up the environment locally. Please follow the instructions in the [README.md](README.md) for a detailed guide on setting up the local development environment using Docker Compose.
+
+### Quick Setup
+
+1.  **Clone the repository**:
+    ```bash
+    git clone [https://github.com/SangramSA/crypto-analytics-dashboard.git](https://github.com/SangramSA/crypto-analytics-dashboard.git)
+    cd crypto-analytics-dashboard
+    ```
+
+2.  **Set up environment variables**:
+    ```bash
+    cp .env.example .env
+    nano .env
+    ```
+
+3.  **Install dependencies**:
+    ```bash
+    pip install -r requirements.txt
+    pip install -e .[dev,test]
+    ```
+
+## Pull Request Process
+
+1.  **Fork the repository** and create your branch from `develop`.
+2.  **Make your changes** in your forked repository.
+3.  **Ensure your code adheres to the coding standards**. We use `black` for formatting, `flake8` for linting, and `mypy` for type checking. You can run these tools locally before committing your changes.
+    ```bash
+    black src/ tests/
+    flake8 src/ tests/
+    mypy src/
+    ```
+4.  **Add tests** for your changes. We have a comprehensive test suite, and we expect new features and bug fixes to be accompanied by tests.
+    * **Unit Tests**: `tests/unit`
+    * **Integration Tests**: `tests/integration`
+    * **Load Tests**: `tests/load`
+5.  **Run the test suite** to ensure that your changes don't break anything.
+    ```bash
+    pytest
+    ```
+6.  **Update the documentation** if you are adding a new feature or changing existing functionality.
+7.  **Submit a pull request** to the `develop` branch of the repository. Please provide a clear description of your changes and why you think they should be merged.
+
+## ✅ Code Style and Quality
+
+To maintain a high level of code quality, we use several tools to enforce our coding standards. The CI/CD pipeline will automatically run these checks on every pull request.
+
+* **Code Formatting**: We use **Black** for code formatting. Please format your code before committing.
+* **Linting**: We use **Flake8** to check for style issues.
+* **Type Checking**: We use **MyPy** for static type checking. Please add type hints to your code.
+* **Security**: We use **Bandit** and **Trivy** to scan for security vulnerabilities.
+
+## 🧪 Testing
+
+We have a comprehensive test suite to ensure the reliability of the platform. All contributions must be accompanied by tests.
+
+* **Unit Tests**: Should cover individual functions and classes in isolation.
+* **Integration Tests**: Should test the interaction between different components of the platform.
+* **Load Tests**: Should test the performance of the platform under high load.
+
+## 📄 License
+
+By contributing to this project, you agree that your contributions will be licensed under the MIT License.
