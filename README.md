@@ -149,7 +149,7 @@ Please follow these steps:
 4.  Push to the Branch (`git push origin feature/AmazingFeature`)
 5.  Open a Pull Request
 
-Please read [CONTRIBUTING.md](CONTRIBUTING.md) for the full guide on our development process and standards.
+Please read [CONTRIBUTING.md](https://github.com/SangramSA/crypto-analytics-dashboard/blob/main/CONTRIBUTING.md%20) for the full guide on our development process and standards.
 
 ---
 
