@@ -20,26 +20,26 @@ The platform uses a scalable, event-driven architecture on AWS to ensure low lat
 ```mermaid
 graph TD
     subgraph " "
-        A[📈<br><b>Crypto Exchanges</b><br>(Binance, Coinbase)]
+        A["📈<br>Crypto Exchanges<br>(Binance, Coinbase)"]
     end
 
     subgraph "Ingest & Process"
-        A -- WebSocket --> B(🚰<br><b>Kinesis</b><br>Data Stream);
-        B -- Real-time Trigger --> C(λ<br><b>Lambda</b><br>Validation/Enrichment);
+        A -- WebSocket --> B["🚰<br>Kinesis<br>Data Stream"];
+        B -- Real-time Trigger --> C["λ<br>Lambda<br>Validation/Enrichment"];
     end
 
     subgraph "Store & Transform"
-        C --> D[📦<br><b>S3 Data Lake</b><br>Partitioned Parquet];
-        D -- ETL Job --> E(✨<br><b>AWS Glue</b><br>OHLCV Aggregation);
+        C --> D["📦<br>S3 Data Lake<br>Partitioned Parquet"];
+        D -- ETL Job --> E["✨<br>AWS Glue<br>OHLCV Aggregation"];
     end
 
     subgraph "Analyze & Visualize"
-        E -- Transformed Data --> F(🗄️<br><b>Redshift</b><br>Data Warehouse);
-        F -- SQL Queries --> G(📊<br><b>QuickSight</b><br>Dashboards);
+        E -- Transformed Data --> F["🗄️<br>Redshift<br>Data Warehouse"];
+        F -- SQL Queries --> G["📊<br>QuickSight<br>Dashboards"];
     end
 
     subgraph "Monitor"
-        C -- Logs & Metrics --> H(⚙️<br><b>CloudWatch</b><br>Alerting & Dashboards);
+        C -- Logs & Metrics --> H["⚙️<br>CloudWatch<br>Alerting & Dashboards"];
         B -- Metrics --> H;
         F -- Metrics --> H;
     end
@@ -169,4 +169,4 @@ This project is distributed under the MIT License. See the `LICENSE` file for mo
 
 ## 🆘 Support
 
-If you encounter any issues or have questions, please file an issue on the [GitHub Issues](https://github.com/your-username/crypto-analytics-dashboard/issues) page.
+If you encounter any issues or have questions, please file an issue on the [GitHub Issues](https://github.com/SangramSA/crypto-analytics-dashboard/issues) page.
